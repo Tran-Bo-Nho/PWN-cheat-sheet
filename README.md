@@ -4,6 +4,8 @@
 
 `pattern search <địa chỉ>` : Tìm offset 
 
+`search-pattern <chuỗi>` : Tìm chuỗi( ví dụ chuỗi /bin/sh)
+
 # PWNtool: < Viết script, payload >
 
 * Để mở : `nano ten.py`
