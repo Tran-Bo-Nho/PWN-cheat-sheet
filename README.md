@@ -30,7 +30,7 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 * Cách lấy hàm ko cần tìm địa chỉ, chỉ việc dùng:
 
-`exe = ELF("./<tên file>", checksec=False)`
+`context.binary = exe = ELF("./<tên file>", checksec=False)`
 
 `payload += p64(exe.sym['<tên hàm>'])`
 
