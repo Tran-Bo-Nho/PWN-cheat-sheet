@@ -34,7 +34,12 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 `payload += p64(exe.sym['<tên hàm>'])`
 
-#Gadget<Tìm đoạn gadget nhỏ>:
+<img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/9f9ebac7-6ab8-4308-aa00-f6c1c4f57ec2" />
+
+* Chuyển /bin/sh\0 thành số nguyên ko dấu rồi gửi vào thanh ghi nào đó
+
+
+# Gadget<Tìm đoạn gadget nhỏ>:
 
 `ROPgadget --binary <tên file> | grep "<đoạn cần tìm>"`
 
