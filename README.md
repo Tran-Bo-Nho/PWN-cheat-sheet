@@ -38,6 +38,8 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 * Chuyển /bin/sh\0 thành số nguyên ko dấu rồi gửi vào thanh ghi nào đó
 
+* Cách viết shellcode : <img width="683" height="403" alt="image" src="https://github.com/user-attachments/assets/3d760efd-6a65-48ca-aa8e-0ddb837e68e1" />
+
 
 # Gadget<Tìm đoạn gadget nhỏ>:
 
