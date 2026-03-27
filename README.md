@@ -26,8 +26,10 @@
 sau đó qua tab wsl khác mở gdb rồi attach pid <img width="1257" height="525" alt="image" src="https://github.com/user-attachments/assets/3a952b07-2189-47f3-a61a-3752ad8af106" />
 xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab wsl vừa viết script xong enter để bắt đầu payload rồi dữ liệu được gửi vào gdb
 
-         
 
+#Gadget<Tìm đoạn gadget nhỏ>:
+
+`ROPgadget --binary <tên file> | grep "<đoạn cần tìm>"`
 
 
 
