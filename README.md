@@ -46,6 +46,8 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 `ROPgadget --binary <tên file> | grep "<đoạn cần tìm>"`
 
 # Ret2Shellcode cần leak:
+* Cách để leak : Thông qua hàm read vì hàm read sẽ ko tự có \0 để kết thúc nên khi enter sẽ bị nối thêm ở đằng sau từ đó lợi dụng để -> địa chỉ muốn leak
+
 * Thường Leak stack save rbp
 
 * Để in ra stack_leak : `stack_leak = u64(p.recv(6))
@@ -55,3 +57,4 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 *<img width="423" height="52" alt="image" src="https://github.com/user-attachments/assets/d5c1b9bb-a93c-4e3d-835e-227cff7b2375" />
 thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm ljust để hàm shellcode + với byte tự tạo thêm do hàm tạo ra để bằng tham số truyền vào tương đương tràn biến và đè Saved RIP
+
