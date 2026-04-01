@@ -50,8 +50,9 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 * Thường Leak stack save rbp
 
-* Để in ra stack_leak : `stack_leak = u64(p.recv(6))
-                        log.info("Stack_leak : " + hex(stack_leak))`
+* Để in ra stack_leak : `stack_leak = u64(p.recv(6))`
+
+                         log.info("Stack_leak : " + hex(stack_leak))
 
 * Overwrite được RIP ở hàm nào thì viết shellcode ở hàm đó
 
