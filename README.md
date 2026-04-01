@@ -53,3 +53,5 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 * Overwrite được RIP ở hàm nào thì viết shellcode ở hàm đó
 
+*<img width="423" height="52" alt="image" src="https://github.com/user-attachments/assets/d5c1b9bb-a93c-4e3d-835e-227cff7b2375" />
+thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm ljust để hàm shellcode + với byte tự tạo thêm do hàm tạo ra để bằng tham số truyền vào tương đương tràn biến và đè Saved RIP
