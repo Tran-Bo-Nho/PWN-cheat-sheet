@@ -45,6 +45,11 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 
 `ROPgadget --binary <tên file> | grep "<đoạn cần tìm>"`
 
+# Ret2Shellcode cần leak:
+* Thường Leak stack save rbp
 
+* Để in ra stack_leak : `stack_leak = u64(p.recv(6))
+                        log.info("Stack_leak : " + hex(stack_leak))`
 
+* Overwrite được RIP ở hàm nào thì viết shellcode ở hàm đó
 
