@@ -60,7 +60,7 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm ljust để hàm shellcode + với byte tự tạo thêm do hàm tạo ra để bằng tham số truyền vào tương đương tràn biến và đè Saved RIP
 
 
-# GOT & PLT :
+# Ret2libc :
 
 `got`: Nơi chứa địa chỉ hàm của libc
 
@@ -79,4 +79,12 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 * `libc.address<libc base> = libc_leak - libc.sym['...']`
 
 * `next(libc.search(b'/bin/sh'))` luôn là offset giữa chuỗi /bin/sh và libc base, cái này hoạt tự lấy libc base + offset để tìm ra chuỗi /bin/sh
+
+*Cụ thể : <img width="436" height="27" alt="image" src="https://github.com/user-attachments/assets/6d02ab3c-9567-4745-87be-9d5bc1b7c3b5" /> 
+
+- Lúc này libc base đang = 0 nên địa chỉ của puts( là = libc base + offset) chính là offset luôn
+
+*Còn khi này : <img width="681" height="376" alt="image" src="https://github.com/user-attachments/assets/39f95e44-9186-4e97-8c10-f0b8637a72bd" />
+- Ta tìm được libc base rồi thì libc.sym['system'] sẽ là địa chỉ system do nó tự lấy libc base + offset luôn và chuỗi /bin/sh tương tự nhưng khác cú pháp 
+
 
