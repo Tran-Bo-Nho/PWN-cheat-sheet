@@ -74,5 +74,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 * libc base là libc có địa chỉ nhỏ nhất
 
-* `libc_sym['...']` luôn là offset của libc_leak và libc_base
+* `libc.sym['...']` luôn là offset của libc_leak và libc_base
 
