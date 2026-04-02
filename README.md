@@ -59,6 +59,9 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 *<img width="423" height="52" alt="image" src="https://github.com/user-attachments/assets/d5c1b9bb-a93c-4e3d-835e-227cff7b2375" />
 thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm ljust để hàm shellcode + với byte tự tạo thêm do hàm tạo ra để bằng tham số truyền vào tương đương tràn biến và đè Saved RIP
 
+# Ret2shellcode cần leak:
+
+* Hàm read khi nhận dữ liệu vào ko tự thêm byte NULL nên nối luôn chuỗi khác <nếu thêm sendlineafter tạo thêm NULL thì read sẽ ko nối được nữa >
 
 # Ret2libc :
 
