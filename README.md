@@ -70,3 +70,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 `exe.plt['...']` : Thực thi hàm của libc
 
+* Thường libc leak cần phải chạy lại hàm main ở script
+
