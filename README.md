@@ -72,3 +72,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 * Thường libc leak cần phải chạy lại hàm main ở script
 
+* libc base là libc có địa chỉ nhỏ nhất
+
