@@ -76,3 +76,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 * `libc.sym['...']` luôn là offset của libc_leak và libc_base
 
+* `libc.address<libc base> = libc_leak - libc.sym['...']`
+
