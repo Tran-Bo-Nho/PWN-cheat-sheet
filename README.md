@@ -78,3 +78,5 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 * `libc.address<libc base> = libc_leak - libc.sym['...']`
 
+* `next(libc.search(b'/bin/sh'))` luôn là offset giữa chuỗi /bin/sh và libc base, cái này hoạt tự lấy libc base + offset để tìm ra chuỗi /bin/sh
+
