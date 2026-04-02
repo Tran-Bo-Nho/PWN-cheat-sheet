@@ -61,7 +61,7 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 # Ret2shellcode cần leak:
 
-* Hàm read khi nhận dữ liệu vào ko tự thêm byte NULL nên nối luôn chuỗi khác <nếu thêm sendlineafter tạo thêm NULL thì read sẽ ko nối được nữa >
+* Hàm printf khi in dữ liệu nối luôn chuỗi khác 
 
 # Ret2libc :
 
