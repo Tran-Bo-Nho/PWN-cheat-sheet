@@ -90,6 +90,12 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 *Còn khi này : <img width="681" height="376" alt="image" src="https://github.com/user-attachments/assets/39f95e44-9186-4e97-8c10-f0b8637a72bd" />
 - Ta tìm được libc base rồi thì libc.sym['system'] sẽ là địa chỉ system do nó tự lấy libc base + offset luôn và chuỗi /bin/sh tương tự nhưng khác cú pháp 
 
-#Stack pivot khai thác save RBP :
+# Stack pivot khai thác save RBP :
 
 - Hàm `leave` chính là : `mov rsp, rbp`(dọn rác là các biến khởi tạo khi mới tạo frame) sau đó `pop rbp` để rsp + 8( mục đích là trỏ vào saved RIP để thực hiện return về ban đầu)
+
+# Stack pivot đổi biến :
+
+- `int(data, 16)` dùng cho hexstring
+
+- `u64(data)` dùng cho raw byte
