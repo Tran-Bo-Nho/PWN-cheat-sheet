@@ -59,9 +59,9 @@ xong di chuyển đến chỗ cần thao tác như read,... rồi quay lại tab
 *<img width="423" height="52" alt="image" src="https://github.com/user-attachments/assets/d5c1b9bb-a93c-4e3d-835e-227cff7b2375" />
 thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm ljust để hàm shellcode + với byte tự tạo thêm do hàm tạo ra để bằng tham số truyền vào tương đương tràn biến và đè Saved RIP
 
-# Ret2shellcode cần leak:
-
 * Hàm read khi nhập dữ liệu ko tự động thêm byte NULL nên khi printf sẽ bị nối chuỗi kế
+
+* Hạn chế có NULL byte 
 
 # Ret2libc :
 
@@ -100,4 +100,18 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 
 - `u64(data)` dùng cho raw byte
 
-- Khi trở về hàm cha saved RBP của hàm con sẽ trở lại thành RBP hàm cha 
+- Khi trở về hàm cha saved RBP của hàm con sẽ trở lại thành RBP hàm cha
+
+# So sánh 32bit & 64bit
+
+| 32                                                         | 64                                            |
+|------------------------------------------------------------|-----------------------------------------------|
+| ebx(arg1), ecx(arg2), edx(arg3)                            | rdi(arg1), rsi(arg2), rdx(arg3)               |
+| Set arg1 `/bin/sh\0` cho execve phải push 0 -> //sh -> /bin| Set arg 1 `/bin/sh\0` cho execve push thẳng   |
+| `int 0x80` = gọi syscall                                   | syscall                                       |
+
+* Cách chuyển từ mã asm -> machine code(op code) để biết đường né NULL byte :
+
+`from pwn import *`
+
+`print(asm("mov eax, 0xb", arch='i386').hex())`
