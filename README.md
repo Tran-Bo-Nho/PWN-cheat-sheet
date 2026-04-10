@@ -109,6 +109,11 @@ thay vì đếm shellcode chiếm bao nhiêu byte thì ta có thể dùng hàm l
 | ebx(arg1), ecx(arg2), edx(arg3)                            | rdi(arg1), rsi(arg2), rdx(arg3)               |
 | Set arg1 `/bin/sh\0` cho execve phải push 0 -> //sh -> /bin| Set arg 1 `/bin/sh\0` cho execve push thẳng   |
 | `int 0x80` = gọi syscall                                   | syscall                                       |
+| Lấy arg từ stack                                           | Lấy arg từ thanh ghi                          |
+| Layout : saved RIP                                         | Layout : saved RIP
+           Hàm trả về xong khi chạy xong hàm mình đã overwrite          pop RDI + arg
+           arg                                                          Hàm muốn chạy( với tham số được truyền ở trên)
+                                                                        Hàm trả về khi chạy xong hàm muốn chạy
 
 * Cách chuyển từ mã asm -> machine code(op code) để biết đường né NULL byte :
 
